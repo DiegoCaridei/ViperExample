@@ -6,15 +6,16 @@
 //  Copyright © 2018 Diego Caridei. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 //MARK: Wireframe -
 protocol PostWireframeProtocol: class {
-
+    static func createModule() -> UIViewController
 }
 //MARK: Presenter -
 protocol PostPresenterProtocol: class {
     var interactor: PostInteractorInputProtocol? { get set }
+    func viewDidLoad()
 }
 
 //MARK: Interactor -

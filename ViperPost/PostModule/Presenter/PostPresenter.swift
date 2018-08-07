@@ -20,6 +20,10 @@ class PostPresenter: PostPresenterProtocol, PostInteractorOutputProtocol {
         self.router = router
     }
     
+    func viewDidLoad() {
+        interactor?.requestPosts()
+    }
+    
     func retrievePosts(posts: Posts) {
         view?.show(post: posts)
     }

@@ -15,12 +15,15 @@ class PostViewController: UIViewController, PostViewProtocol {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad()
     }
     
     func show(post: Posts) {
         self.posts = post
+        DispatchQueue.main.async { self.tableView.reloadData() }
     }
 }
+
 extension PostViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
