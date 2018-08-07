@@ -2,4 +2,4 @@
 
 First experiment with Viper
 
-![](/Users/flexkid/Desktop/ViperPost/viper.png)
+![](viper.png)
