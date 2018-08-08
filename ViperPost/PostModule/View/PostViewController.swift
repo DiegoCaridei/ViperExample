@@ -23,7 +23,6 @@ class PostViewController: UIViewController, PostViewProtocol {
         DispatchQueue.main.async { self.tableView.reloadData() }
     }
 }
-
 extension PostViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -31,7 +30,8 @@ extension PostViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:PostVC.cellID , for: indexPath)
-        cell.textLabel?.text = posts[indexPath.row].title
+        let title = posts[indexPath.row].title
+        cell.textLabel?.text = title
         return cell
     }
 }
