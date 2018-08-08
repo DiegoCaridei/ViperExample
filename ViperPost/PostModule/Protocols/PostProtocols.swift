@@ -11,11 +11,14 @@ import UIKit
 //MARK: Wireframe -
 protocol PostWireframeProtocol: class {
     static func createModule() -> UIViewController
+    func gotoDetailView(view: PostViewProtocol, forPost: PostElement) 
 }
+
 //MARK: Presenter -
 protocol PostPresenterProtocol: class {
     var interactor: PostInteractorInputProtocol? { get set }
     func viewDidLoad()
+    func gotoDetailView(forPost post: PostElement)
 }
 
 //MARK: Interactor -

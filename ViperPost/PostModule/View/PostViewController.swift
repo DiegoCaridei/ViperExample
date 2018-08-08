@@ -35,3 +35,10 @@ extension PostViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension PostViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]
+        presenter?.gotoDetailView(forPost: post)
+    }
+}

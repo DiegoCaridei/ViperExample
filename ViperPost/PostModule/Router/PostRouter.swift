@@ -9,7 +9,7 @@
 import UIKit
 
 class PostRouter: PostWireframeProtocol {
-
+    
     weak var viewController: UIViewController?
     static var mainStoryboard: UIStoryboard {
         return UIStoryboard(name:Router.mainStoryboard, bundle: Bundle.main)
@@ -27,5 +27,13 @@ class PostRouter: PostWireframeProtocol {
         router.viewController = view
 
         return view
+    }
+    
+    func gotoDetailView(view: PostViewProtocol, forPost: PostElement) {
+        let postDetail = DetailPostRouter.createPostDetailModule(forPost: forPost)
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(postDetail, animated: true)
+        }
+
     }
 }

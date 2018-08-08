@@ -9,7 +9,7 @@
 import UIKit
 
 class PostPresenter: PostPresenterProtocol, PostInteractorOutputProtocol {
- 
+    
     weak private var view: PostViewProtocol?
     var interactor: PostInteractorInputProtocol?
     private let router: PostWireframeProtocol
@@ -30,6 +30,11 @@ class PostPresenter: PostPresenterProtocol, PostInteractorOutputProtocol {
     
     func onError(error: Error) {
         //show error into VC
+    }
+    
+    func gotoDetailView(forPost post: PostElement) {
+        if let view = view { router.gotoDetailView(view: view, forPost: post) }
+         // else {self.onError(error: Error) }
     }
 
 }

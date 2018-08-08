@@ -11,6 +11,7 @@ import Foundation
 struct Router {
     static let mainStoryboard = "Main"
     static let mainNavigation = "mainNavigation"
+    static let detailPostVC = "DetailPostViewController"
 }
 
 struct PostVC {

@@ -20,6 +20,12 @@
 		8FA9CC7E211A19C4001962CE /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA9CC78211A19C4001962CE /* PostInteractor.swift */; };
 		8FA9CC87211A264F001962CE /* ApiURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA9CC86211A264F001962CE /* ApiURL.swift */; };
 		8FA9CC89211A2AEE001962CE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA9CC88211A2AEE001962CE /* Constant.swift */; };
+		D1A48866211B174800E7DD1C /* DetailPostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A48860211B174800E7DD1C /* DetailPostPresenter.swift */; };
+		D1A48867211B174800E7DD1C /* DetailPostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A48861211B174800E7DD1C /* DetailPostRouter.swift */; };
+		D1A48868211B174800E7DD1C /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A48862211B174800E7DD1C /* DetailPostViewController.swift */; };
+		D1A48869211B174800E7DD1C /* DetailPostProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A48863211B174800E7DD1C /* DetailPostProtocols.swift */; };
+		D1A4886A211B174800E7DD1C /* DetailPostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A48864211B174800E7DD1C /* DetailPostInteractor.swift */; };
+		D1A4886D211B188400E7DD1C /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4886C211B188400E7DD1C /* StoryboardHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,12 @@
 		8FA9CC78211A19C4001962CE /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
 		8FA9CC86211A264F001962CE /* ApiURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiURL.swift; sourceTree = "<group>"; };
 		8FA9CC88211A2AEE001962CE /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D1A48860211B174800E7DD1C /* DetailPostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostPresenter.swift; sourceTree = "<group>"; };
+		D1A48861211B174800E7DD1C /* DetailPostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostRouter.swift; sourceTree = "<group>"; };
+		D1A48862211B174800E7DD1C /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
+		D1A48863211B174800E7DD1C /* DetailPostProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostProtocols.swift; sourceTree = "<group>"; };
+		D1A48864211B174800E7DD1C /* DetailPostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostInteractor.swift; sourceTree = "<group>"; };
+		D1A4886C211B188400E7DD1C /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +82,8 @@
 		8FA9CC59211A185B001962CE /* ViperPost */ = {
 			isa = PBXGroup;
 			children = (
-				8FA9CC85211A2634001962CE /* Utility */,
+				D1A4885F211B172400E7DD1C /* DetailPostModule */,
+				8FA9CC85211A2634001962CE /* Common */,
 				8FA9CC6D211A186D001962CE /* Network */,
 				8FA9CC6C211A1867001962CE /* PostModule */,
 				8FA9CC5A211A185B001962CE /* AppDelegate.swift */,
@@ -151,13 +164,26 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		8FA9CC85211A2634001962CE /* Utility */ = {
+		8FA9CC85211A2634001962CE /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				8FA9CC86211A264F001962CE /* ApiURL.swift */,
 				8FA9CC88211A2AEE001962CE /* Constant.swift */,
+				D1A4886C211B188400E7DD1C /* StoryboardHelper.swift */,
 			);
-			path = Utility;
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D1A4885F211B172400E7DD1C /* DetailPostModule */ = {
+			isa = PBXGroup;
+			children = (
+				D1A48860211B174800E7DD1C /* DetailPostPresenter.swift */,
+				D1A48861211B174800E7DD1C /* DetailPostRouter.swift */,
+				D1A48862211B174800E7DD1C /* DetailPostViewController.swift */,
+				D1A48863211B174800E7DD1C /* DetailPostProtocols.swift */,
+				D1A48864211B174800E7DD1C /* DetailPostInteractor.swift */,
+			);
+			path = DetailPostModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,13 +259,19 @@
 			files = (
 				8FA9CC7A211A19C4001962CE /* PostPresenter.swift in Sources */,
 				8FA9CC7D211A19C4001962CE /* PostProtocols.swift in Sources */,
+				D1A48869211B174800E7DD1C /* DetailPostProtocols.swift in Sources */,
 				8FA9CC87211A264F001962CE /* ApiURL.swift in Sources */,
 				8FA9CC72211A192D001962CE /* NetworkManager.swift in Sources */,
 				8FA9CC7C211A19C4001962CE /* PostViewController.swift in Sources */,
 				8FA9CC5B211A185B001962CE /* AppDelegate.swift in Sources */,
 				8FA9CC7E211A19C4001962CE /* PostInteractor.swift in Sources */,
+				D1A48867211B174800E7DD1C /* DetailPostRouter.swift in Sources */,
+				D1A4886A211B174800E7DD1C /* DetailPostInteractor.swift in Sources */,
+				D1A4886D211B188400E7DD1C /* StoryboardHelper.swift in Sources */,
 				8FA9CC89211A2AEE001962CE /* Constant.swift in Sources */,
 				8FA9CC7B211A19C4001962CE /* PostRouter.swift in Sources */,
+				D1A48866211B174800E7DD1C /* DetailPostPresenter.swift in Sources */,
+				D1A48868211B174800E7DD1C /* DetailPostViewController.swift in Sources */,
 				8FA9CC6F211A1894001962CE /* PostElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
